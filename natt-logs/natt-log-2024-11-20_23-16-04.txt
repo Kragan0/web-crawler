@@ -1,0 +1,392 @@
+[23:16:04][PluginLoader][WARNING] Plugins directory not found.
+[23:16:04][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/web-crawler-config/-/raw/main/test-config-5.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[23:16:04][NATTCore][INFO] Working directory path: C:\Users\alexg\Downloads\web-crawler-main\web-crawler-main
+[23:16:04][NATTCore][INFO] Start loading of the configuration file ...
+[23:16:05][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/web-crawler-config/-/raw/main/test-config-5.yaml?ref_type=heads)
+[23:16:05][NATTCore][INFO] Configuration loading done
+[23:16:05][NATTCore][INFO] Start building test structure according to the configuration ...
+[23:16:05][NATTCore][INFO] Test structure ...
+[23:16:05][NATTCore][INFO] Test structure building done
+[23:16:05][NATTCore][INFO] Start test executing ...
+[23:16:05][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[23:16:05][NATTCore][INFO] Starts execution on the root keyword  ...
+[23:16:05][TestSuiteKw][INFO] Test case 'Test utb.cz s hloubkou 0' starts executing now
+[23:16:05][MessageBuffer][INFO] Message buffer created for module with name: default
+[23:16:05][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 13000 ms
+[23:16:07][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app-all.jar https://www.utb.cz/en/ 0 0
+[23:16:07][ProcessManager][INFO] New PID (12308) added to file
+[23:16:18][WaitUntilKw][WARNING] Timeout.. Action was not invoked!
+[23:16:18][MessageBuffer][INFO] Message buffer created for module with name: module-1
+[23:16:18][WebCrawler][INFO] (module-1) Webcrawler is running now. Start URL: https://www.utb.cz/en/
+[23:16:19][WebCrawler][INFO] (module-1) Job finished [elapsed time: 0.318 s]
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-1 ] Content: 'the;79'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-2 ] Content: 'of;72'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-3 ] Content: 'and;65'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-4 ] Content: 'to;47'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-5 ] Content: 'cookie;28'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-6 ] Content: 'by;24'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-7 ] Content: 'for;24'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-8 ] Content: 'is;24'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-9 ] Content: 'cookies;21'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-10 ] Content: 'in;19'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-11 ] Content: 'Faculty;18'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-12 ] Content: 'Centre;17'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-13 ] Content: 'TBU;17'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-14 ] Content: 'user;17'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-15 ] Content: 'on;16'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-16 ] Content: 'used;15'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-17 ] Content: 'University;15'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-18 ] Content: 'are;14'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-19 ] Content: 'The;13'
+[23:16:19][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-20 ] Content: 'set;13'
+[23:16:19][TestSuiteKw][ERROR] Test suite 'Testování Web crawleru pro hloubku 0' - Test case 'Test utb.cz s hloubkou 0' failed
+[23:16:19][MessageBuffer][INFO] Message buffer cleared
+[23:16:19][ExternalProgramRunner][INFO] (default) Termiting external application
+[23:16:19][ProcessManager][INFO] PID (12308) removed from file
+[23:16:19][ProcessManager][INFO] PID (12308) removed from file
+[23:16:19][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[23:16:19][ExternalProgramRunner][WARNING] (default) Error message from external application: Analyzing https://www.utb.cz/en//
+Zachycena neoetøená výjimka, konèíme...
+java.util.NoSuchElementException
+	at java.base/java.util.LinkedList.removeFirst(LinkedList.java:274)
+	at utb.fai.App.main(App.java:64)
+Invalid URI: https://www.utb.cz/
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: https://www.facebook.com/UTBZlin/
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: https://www.instagram.com/utbzlin/
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: https://twitter.com/UTBZlin
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: https://www.utb.cz/en/admissions/study-in-english/apply-now/
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: https://stag.utb.cz/portal/studium/index.html?pc_lang=en
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+
+[23:16:19][TestSuiteKw][INFO] Test case 'Test jlcpcb.com s hloubkou 0' starts executing now
+[23:16:19][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 13000 ms
+[23:16:21][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app-all.jar https://jlcpcb.com/ 0 0
+[23:16:21][ProcessManager][INFO] New PID (22664) added to file
+[23:16:32][WaitUntilKw][WARNING] Timeout.. Action was not invoked!
+[23:16:32][WebCrawler][INFO] (module-1) Webcrawler is running now. Start URL: https://jlcpcb.com/
+[23:16:33][WebCrawler][INFO] (module-1) Job finished [elapsed time: 0.425 s]
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-1 ] Content: '-;15'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-2 ] Content: 'PCB;10'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-3 ] Content: 'to;9'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-4 ] Content: 'Quote;9'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-5 ] Content: '>;8'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-6 ] Content: '24;8'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-7 ] Content: 'Learn;8'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-8 ] Content: 'Now;8'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-9 ] Content: 'Support;8'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-10 ] Content: 'and;8'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-11 ] Content: 'Time:;7'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-12 ] Content: 'Build;7'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-13 ] Content: 'From;7'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-14 ] Content: '$2;6'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-15 ] Content: 'for;6'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-16 ] Content: 'More;6'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-17 ] Content: 'PCBs;6'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-18 ] Content: 'Parts;5'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-19 ] Content: 'days;5'
+[23:16:33][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-20 ] Content: 'hours;5'
+[23:16:33][TestSuiteKw][ERROR] Test suite 'Testování Web crawleru pro hloubku 0' - Test case 'Test jlcpcb.com s hloubkou 0' failed
+[23:16:33][MessageBuffer][INFO] Message buffer cleared
+[23:16:33][ExternalProgramRunner][INFO] (default) Termiting external application
+[23:16:33][ProcessManager][INFO] PID (22664) removed from file
+[23:16:33][ProcessManager][INFO] PID (22664) removed from file
+[23:16:33][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[23:16:33][ExternalProgramRunner][WARNING] (default) Error message from external application: Analyzing https://jlcpcb.com//
+Zachycena neoetøená výjimka, konèíme...
+java.util.NoSuchElementException
+	at java.base/java.util.LinkedList.removeFirst(LinkedList.java:274)
+	at utb.fai.App.main(App.java:64)
+Invalid URI: https://jlc3dp.com/?source=JLCPCB-top-productbar
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: https://cnc.jlcpcb.com/?source=JLCPCB-top-productbar
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: https://jlcmc.com/?source=JLCPCB-top-productbar
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: /coupon-center
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: /help
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: mailto:support@jlcpcb.com
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+
+[23:16:34][MessageBuffer][INFO] Message buffer cleared
+[23:16:34][TestSuiteKw][INFO] Test case 'Test wokwi.com s hloubkou 1' starts executing now
+[23:16:34][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 70000 ms
+[23:16:35][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app-all.jar https://wokwi.com/ 1 0
+[23:16:35][ProcessManager][INFO] New PID (20664) added to file
+[23:17:44][WaitUntilKw][WARNING] Timeout.. Action was not invoked!
+[23:17:44][WebCrawler][INFO] (module-1) Webcrawler is running now. Start URL: https://wokwi.com/
+[23:17:45][WebCrawler][INFO] (module-1) Job finished [elapsed time: 1.599 s]
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-1 ] Content: ';2433'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-2 ] Content: '0x00,;812'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-3 ] Content: 'the;642'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-4 ] Content: '=;517'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-5 ] Content: '//;434'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-6 ] Content: 'to;388'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-7 ] Content: '{;360'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-8 ] Content: 'and;300'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-9 ] Content: '};290'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-10 ] Content: 'of;259'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-11 ] Content: 'or;227'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-12 ] Content: 'for;199'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-13 ] Content: 'your;189'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-14 ] Content: 'you;173'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-15 ] Content: 'in;148'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-16 ] Content: 'if;147'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-17 ] Content: '-;126'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-18 ] Content: 'with;122'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-19 ] Content: 'a;119'
+[23:17:45][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-20 ] Content: 'uint8_t;94'
+[23:17:45][TestSuiteKw][ERROR] Test suite 'Testování Web crawleru pro hloubku 1' - Test case 'Test wokwi.com s hloubkou 1' failed
+[23:17:45][MessageBuffer][INFO] Message buffer cleared
+[23:17:45][ExternalProgramRunner][INFO] (default) Termiting external application
+[23:17:45][ProcessManager][INFO] PID (20664) removed from file
+[23:17:45][ProcessManager][INFO] PID (20664) removed from file
+[23:17:45][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[23:17:45][ExternalProgramRunner][WARNING] (default) Error message from external application: Analyzing https://wokwi.com//
+Zachycena neoetøená výjimka, konèíme...
+java.util.NoSuchElementException
+	at java.base/java.util.LinkedList.removeFirst(LinkedList.java:274)
+	at utb.fai.App.main(App.java:64)
+Invalid URI: /
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: https://docs.wokwi.com/?utm_source=wokwi
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: /discord
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: https://www.linkedin.com/groups/9179854/
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: /arduino
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: /esp32
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+
+[23:17:46][TestSuiteKw][INFO] Test case 'Test jlcpcb.com s hloubkou 1' starts executing now
+[23:17:46][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 70000 ms
+[23:17:47][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app-all.jar https://jlcpcb.com/ 1 0
+[23:17:47][ProcessManager][INFO] New PID (20600) added to file
+[23:18:56][WaitUntilKw][WARNING] Timeout.. Action was not invoked!
+[23:18:56][WebCrawler][INFO] (module-1) Webcrawler is running now. Start URL: https://jlcpcb.com/
+[23:18:58][Parser][WARNING] Failed to parse web page 'https://www.instagram.com/jlcpcb'
+[23:19:02][WebCrawler][INFO] (module-1) Job finished [elapsed time: 6.414 s]
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-1 ] Content: 'and;1011'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-2 ] Content: 'the;1010'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-3 ] Content: 'to;878'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-4 ] Content: 'of;539'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-5 ] Content: 'PCB;499'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-6 ] Content: 'in;417'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-7 ] Content: 'for;415'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-8 ] Content: 'is;388'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-9 ] Content: 'a;370'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-10 ] Content: '-;346'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-11 ] Content: 'JLCPCB;344'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-12 ] Content: 'your;343'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-13 ] Content: 'you;324'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-14 ] Content: 'or;318'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-15 ] Content: 'with;273'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-16 ] Content: 'be;191'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-17 ] Content: '3D;188'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-18 ] Content: 'The;180'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-19 ] Content: 'by;178'
+[23:19:02][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: word-20 ] Content: 'on;178'
+[23:19:02][TestSuiteKw][ERROR] Test suite 'Testování Web crawleru pro hloubku 1' - Test case 'Test jlcpcb.com s hloubkou 1' failed
+[23:19:03][MessageBuffer][INFO] Message buffer cleared
+[23:19:03][ExternalProgramRunner][INFO] (default) Termiting external application
+[23:19:03][ProcessManager][INFO] PID (20600) removed from file
+[23:19:03][ProcessManager][INFO] PID (20600) removed from file
+[23:19:03][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[23:19:03][ExternalProgramRunner][WARNING] (default) Error message from external application: Analyzing https://jlcpcb.com//
+Zachycena neoetøená výjimka, konèíme...
+java.util.NoSuchElementException
+	at java.base/java.util.LinkedList.removeFirst(LinkedList.java:274)
+	at utb.fai.App.main(App.java:64)
+Invalid URI: https://jlc3dp.com/?source=JLCPCB-top-productbar
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: https://cnc.jlcpcb.com/?source=JLCPCB-top-productbar
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: https://jlcmc.com/?source=JLCPCB-top-productbar
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: /coupon-center
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: /help
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Invalid URI: mailto:support@jlcpcb.com
+java.lang.NullPointerException: Cannot invoke "java.net.URI.resolve(String)" because "this.pageURI" is null
+	at utb.fai.ParserCallback.handleContent(ParserCallback.java:82)
+	at utb.fai.App.lambda$main$0(App.java:72)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+
+[23:19:03][MessageBuffer][INFO] Message buffer cleared
+[23:19:03][MessageBuffer][INFO] Message buffer cleared
+[23:19:03][NATTCore][INFO] Test executing finished
+[23:19:03][NATTCore][INFO] Start generating test report
+[23:19:04][TestReportGenerator][INFO] Report saved to file
+[23:19:04][NATTCore][WARNING] Failed test cases: "Test utb.cz s hloubkou 0", "Test jlcpcb.com s hloubkou 0", "Test wokwi.com s hloubkou 1", "Test jlcpcb.com s hloubkou 1"
+[23:19:04][NATTCore][INFO] Final score: 0.000000
+[23:19:04][NATTCore][ERROR] Testing done. Leaving status: FAILED
